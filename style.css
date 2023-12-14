@@ -1,0 +1,160 @@
+body{
+    background-color: #1e1e1e;
+    min-height: 100dvh;
+    display: grid;
+    align-items: center;
+    justify-content: center;
+}
+
+.clock{
+    background-color: transparent;
+    outline: 20px solid orange;
+    width: 800px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    position: relative;
+}
+
+.clock > .number{
+    position: absolute;
+    color: orange;
+    margin: 0;
+    width: fit-content;
+    font-size: 4rem;
+}
+
+.clock > #number_1 {
+    top: 15.36%;
+    left: 70.00%;
+    transform: translate(-50%, -50%);
+}
+
+.clock > #number_2 {
+    top: 30.00%;
+    left: 84.64%;
+    transform: translate(-50%, -50%);
+}
+
+.clock > #number_3 {
+    top: 50.00%;
+    left: 90.00%;
+    transform: translate(-50%, -50%);
+}
+
+.clock > #number_4 {
+    top: 70.00%;
+    left: 84.64%;
+    transform: translate(-50%, -50%);
+}
+
+.clock > #number_5 {
+    top: 84.64%;
+    left: 70.00%;
+    transform: translate(-50%, -50%);
+}
+
+.clock > #number_6 {
+    top: 90.00%;
+    left: 50.00%;
+    transform: translate(-50%, -50%);
+}
+
+.clock > #number_7 {
+    top: 84.64%;
+    left: 30.00%;
+    transform: translate(-50%, -50%);
+}
+
+.clock > #number_8 {
+    top: 70.00%;
+    left: 15.36%;
+    transform: translate(-50%, -50%);
+}
+
+.clock > #number_9 {
+    top: 50.00%;
+    left: 10.00%;
+    transform: translate(-50%, -50%);
+}
+
+.clock > #number_10 {
+    top: 30.00%;
+    left: 15.36%;
+    transform: translate(-50%, -50%);
+}
+
+.clock > #number_11 {
+    top: 15.36%;
+    left: 30.00%;
+    transform: translate(-50%, -50%);
+}
+
+.clock > #number_12 {
+    top: 10%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.pointers{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    background-color: orange;
+    width: 5%;
+    aspect-ratio: 1;
+    margin: auto;
+    border-radius: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.sec{
+    position: absolute;
+    background-color: orange;
+    width: 600%;
+    height: 10%;
+    top: 45%;
+    left: 50%;
+    transform-origin: 0;
+    animation: orbit 60s infinite linear;
+}
+
+.min{
+    position: absolute;
+    background-color: orange;
+    width: 400%;
+    height: 20%;
+    top: 40%;
+    left: 50%;
+    transform-origin: 0;
+    animation: orbit 3600s infinite linear;
+}
+
+.hour{
+    position: absolute;
+    background-color: orange;
+    width: 200%;
+    height: 30%;
+    top: 35%;
+    left: 50%;
+    transform-origin: 0;
+    animation: orbit 43200s infinite linear;
+}
+
+@keyframes orbit {
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+#clock_foreground{
+    opacity: 100%;
+    filter: blur(0px); /* add blur for background effect */
+}
+
+#clock_background{
+    position: absolute;
+    filter: blur(50px);
+}
